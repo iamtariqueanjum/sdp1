@@ -1,0 +1,12 @@
+db.LoginData.insert([
+{"Username":"ramaroa1234","passWord":"ramaroa9898"},
+{"Username":"rajtambi4","passWord":"rajsekhar900"},
+{"Username":"kiranmayirinki","passWord":"irinki2000"},
+{"Username":"tariquemd","passWord":"tariqueanjum"},
+{"Username":"vamsihero007","passWord":"marvelvamsi"},
+{"Username":"arunagali","passWord":"sridevi"},
+{"Username":"naveen3209","passWord":"naveenjedi123"},
+{"Username":"nandisubhakar","passWord":"subhakarnandi"},
+{"Username":"deepakraj420","passWord":"deepakraj007"},
+{"Username":"harishmadha99","passWord":"Harishdc"},
+]);
