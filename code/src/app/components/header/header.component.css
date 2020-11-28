@@ -54,3 +54,18 @@
   .pointer {
     cursor: pointer;
 }
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+input[type=text] {
+  width: 130px;
+  height: 50px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 50%;
+}
