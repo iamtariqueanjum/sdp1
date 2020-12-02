@@ -26,6 +26,9 @@ export class ProductsComponent implements OnInit {
   onp5(){
     this.router.navigate(['/product5'])
   }
+  onp6(){
+    this.router.navigate(['/product6'])
+  }
   onp7(){
     this.router.navigate(['/product7'])
   }
@@ -43,9 +46,6 @@ export class ProductsComponent implements OnInit {
   }
   onp12(){
     this.router.navigate(['/product12'])
-  }
-  onp6(){
-    this.router.navigate(['/product6'])
   }
 
 }

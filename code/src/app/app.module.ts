@@ -15,7 +15,7 @@ import { Product4Component } from './components/product-list/product4/product4.c
 import { Product5Component } from './components/product-list/product5/product5.component';
 import { Product6Component } from './components/product-list/product6/product6.component';
 import { LoginComponent } from './components/login/login.component';
-import { SigninComponent } from './components/signin/signin.component';
+import { SignupComponent } from './components/signup/signup.component';
 import { Product7Component } from './components/product-list/product7/product7.component';
 import { Product8Component } from './components/product-list/product8/product8.component';
 import { Product9Component } from './components/product-list/product9/product9.component';
@@ -38,7 +38,7 @@ import { Product12Component } from './components/product-list/product12/product1
     Product5Component,
     Product6Component,
     LoginComponent,
-    SigninComponent,
+    SignupComponent,
     Product7Component,
     Product8Component,
     Product9Component,

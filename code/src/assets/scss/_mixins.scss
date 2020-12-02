@@ -1,93 +1,56 @@
-@mixin transition($time) {
-	-webkit-transition: all $time ease-out 0s;
-	-moz-transition: all $time ease-out 0s;
-	-ms-transition: all $time ease-out 0s;
-	-o-transition: all $time ease-out 0s;
-	transition: all $time ease-out 0s;
+// Mixins
+// --------------------------
+
+@mixin fa-icon {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
 }
 
-@mixin transform($value) {
-  -webkit-transform: $value;
-      -ms-transform: $value;
-          transform: $value;
+@mixin fa-icon-rotate($degrees, $rotation) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation})";
+  transform: rotate($degrees);
+}
+
+@mixin fa-icon-flip($horiz, $vert, $rotation) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation}, mirror=1)";
+  transform: scale($horiz, $vert);
 }
 
 
-@mixin background($imgpath,$position: center,$size: cover,$repeat: no-repeat) {
-    background: {
-        image: url($imgpath);
-        position: $position;
-        repeat: $repeat;
-        size: $size;
-    }
+// Only display content to screen readers. A la Bootstrap 4.
+//
+// See: http://a11yproject.com/posts/how-to-hide-content/
+
+@mixin sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
-@mixin transform_time($total_time) {
-    -webkit-transition: $total_time;
-    transition: $total_time;
+
+// Use in conjunction with .sr-only to only display content when it's focused.
+//
+// Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+//
+// Credit: HTML5 Boilerplate
+
+@mixin sr-only-focusable {
+  &:active,
+  &:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
 }
-@mixin placeholder {
-	&.placeholder {
-		@content;
-	}
-	&:-moz-placeholder {
-		@content;
-	}
-	&::-moz-placeholder {
-		@content;
-	}
-	&::-webkit-input-placeholder {
-		@content;
-	}
-}
-// @mixin transition($args: all 0.6s ease 0s) {
-// 	-webkit-transition: $args;
-// 	-moz-transition: $args;
-// 	-o-transition: $args;
-// 	transition: $args;
-// }
-
-
-// @mixin keyframes ($animation-name) {
-// 	@-webkit-keyframes #{$animation-name} {
-// 		@content;
-// 	}
-// 	@-moz-keyframes #{$animation-name} {
-// 		@content;
-// 	}
-// 	@-o-keyframes #{$animation-name} {
-// 		@content;
-// 	}
-// 	@keyframes #{$animation-name} {
-// 		@content;
-// 	}
-// }
-// @mixin transition($property: all,
-// $duration: 300ms,
-// $animate: linear,
-// $delay:0s) {
-//     transition: $property $duration $animate $delay;
-// }
-
-// @mixin transform($transform) {
-//     -webkit-transform: $transform;
-//     -moz-transform: $transform;
-//     -o-transform: $transform;
-//     -ms-transform: $transform;
-//     transform: $transform;
-// }
-
-// // Placeholder Mixins
-// @mixin placeholder {
-//     &.placeholder {
-//         @content;
-//     }
-//     &:-moz-placeholder {
-//         @content;
-//     }
-//     &::-moz-placeholder {
-//         @content;
-//     }
-//     &::-webkit-input-placeholder {
-//         @content;
-//     }
-// }

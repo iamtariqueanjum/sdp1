@@ -14,8 +14,8 @@ export class LoginComponent implements OnInit {
   onLogin(){
     this.router.navigate(['/login'])
   }
-  onSign(){
-    this.router.navigate(['/signin'])
+  onSignup(){
+    this.router.navigate(['/signup'])
   }
 
 }

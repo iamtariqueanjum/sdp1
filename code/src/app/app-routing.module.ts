@@ -4,7 +4,7 @@ import { Product10Component } from './components/product-list/product10/product1
 import { Product9Component } from './components/product-list/product9/product9.component';
 import { Product8Component } from './components/product-list/product8/product8.component';
 import { Product7Component } from './components/product-list/product7/product7.component';
-import { SigninComponent } from './components/signin/signin.component';
+import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { Product6Component } from './components/product-list/product6/product6.component';
 import { Product5Component } from './components/product-list/product5/product5.component';
@@ -34,7 +34,7 @@ const routes: Routes = [
   {path:'product11',component:Product11Component},
   {path:'product12',component:Product12Component},
   {path:'login',component:LoginComponent},
-  {path:'signin',component:SigninComponent},
+  {path:'signup',component:SignupComponent},
 ];
 
 @NgModule({
@@ -42,4 +42,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents=[SigninComponent,CartComponent,ProductsComponent,Product1Component,Product2Component,Product3Component,Product4Component,Product5Component,Product6Component,Product7Component,Product8Component,Product9Component,Product9Component,Product11Component,Product12Component,LoginComponent];
+export const routingComponents=[SignupComponent,CartComponent,ProductsComponent,Product1Component,Product2Component,Product3Component,Product4Component,Product5Component,Product6Component,Product7Component,Product8Component,Product9Component,Product9Component,Product11Component,Product12Component,LoginComponent];
