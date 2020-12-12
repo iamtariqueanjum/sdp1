@@ -1,0 +1,43 @@
+<!--================login_part Area =================-->
+<section class="login_part section_padding ">
+    <div class="container">
+        <div class="row align-items-center">
+                <div class="login_part_form">
+                    <div class="login_part_form_iner">
+                        <h3>Welcome <br>
+                            Please Register</h3>
+                        <form class="row contact_form" method="POST" action="/register">
+                            <div class="col-md-12 form-group p_star">
+                                <input type="text" class="form-control" id="fullname" name="fullname" value="" required
+                                    placeholder="Full Name">
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <input type="text" class="form-control" id="uname" name="uname" value="" required
+                                    placeholder="Username">
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <input type="email" class="form-control" id="email" name="email" value="" required
+                                    placeholder="Email">
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <input type="password" class="form-control" id="password" name="password" value="" required
+                                    placeholder="Password">
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <input type="number" class="form-control" id="phone" name="phone" value="" required
+                                    placeholder="Phone Number">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <button type="submit" value="submit" class="btn_3">
+                                    Sign Up
+                                </button>
+                                <button type="submit" value="submit" class="btn_3" (click)="onLogin()">
+                                    Log In
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>

@@ -1,5 +1,3 @@
-// my node start point
-
 var express = require('express');
 var http = require('http');
 var path = require('path');
@@ -9,7 +7,6 @@ var bodyParser = require('body-parser');
 var config = require('./config');
 var userRoute = require('./routes/user.route');
  
-
 // connect to mongoDB 
 mongoose.connect(config.dbUrl);
 mongoose.connection.on('connected', () => {
@@ -32,7 +29,7 @@ app.use(express.static(__dirname + '/public'));
 
 // set your first route
 app.get('/', (req, res) => {
-    // res.send('Hello Nodemon!');
+
     res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
