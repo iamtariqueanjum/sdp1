@@ -25,6 +25,7 @@ import { Product10Component } from './components/product-list/product10/product1
 import { Product11Component } from './components/product-list/product11/product11.component';
 import { Product12Component } from './components/product-list/product12/product12.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ]),
     BrowserAnimationsModule,
   ],
-  providers: [AppHttpService, AuthService],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},AppHttpService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
