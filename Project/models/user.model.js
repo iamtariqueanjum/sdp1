@@ -1,10 +1,15 @@
-
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 
 var userSchema = mongoose.Schema({
-    name:{
-        type: String
+    fullname: {
+        type: String,
+        required: true,
+        default: ''
+    },
+    uname:{
+        type: String,
+        unique: true,
     },
     email: {
         type: String,
@@ -14,14 +19,21 @@ var userSchema = mongoose.Schema({
     password: {
         type: String,
         required: true
+    },
+    phone: {
+        type: Number
+    },
+    admin: {
+        type: Boolean,
+        default: false
     }
 });
 
 var User = mongoose.model('User', userSchema);
 
 // save user to database
-User.addUser = function(user, callback){
-
+User.addUser = function
+(user, callback){
     bcrypt.genSalt(10, (err, salt)=>{
         if(err){
             callback('server error');
@@ -46,8 +58,8 @@ User.addUser = function(user, callback){
 };
 
 // login 
-User.login = function(email, password, callback){
-    User.findOne({email: email}, (err, user)=>{
+User.login = function(uname, password, callback){
+    User.findOne({uname: uname}, (err, user)=>{
         if(err){
             console.log(err);
             callback('server error');
@@ -68,5 +80,3 @@ User.login = function(email, password, callback){
 }
 
 module.exports = User;
-
-

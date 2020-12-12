@@ -189,6 +189,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_product_list_product11_product11_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/product-list/product11/product11.component */ "./src/app/components/product-list/product11/product11.component.ts");
 /* harmony import */ var _components_product_list_product12_product12_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/product-list/product12/product12.component */ "./src/app/components/product-list/product12/product12.component.ts");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+
 
 
 
@@ -221,7 +223,7 @@ __webpack_require__.r(__webpack_exports__);
 class AppModule {
 }
 AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]] });
-AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [_services_app_http_service__WEBPACK_IMPORTED_MODULE_1__["AppHttpService"], _services_auth_service__WEBPACK_IMPORTED_MODULE_0__["AuthService"]], imports: [[
+AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [{ provide: _angular_common__WEBPACK_IMPORTED_MODULE_27__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_27__["HashLocationStrategy"] }, _services_app_http_service__WEBPACK_IMPORTED_MODULE_1__["AppHttpService"], _services_auth_service__WEBPACK_IMPORTED_MODULE_0__["AuthService"]], imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_5__["AppRoutingModule"],
             _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot([
@@ -283,7 +285,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjector
                     ]),
                     _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_26__["BrowserAnimationsModule"],
                 ],
-                providers: [_services_app_http_service__WEBPACK_IMPORTED_MODULE_1__["AppHttpService"], _services_auth_service__WEBPACK_IMPORTED_MODULE_0__["AuthService"]],
+                providers: [{ provide: _angular_common__WEBPACK_IMPORTED_MODULE_27__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_27__["HashLocationStrategy"] }, _services_app_http_service__WEBPACK_IMPORTED_MODULE_1__["AppHttpService"], _services_auth_service__WEBPACK_IMPORTED_MODULE_0__["AuthService"]],
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
             }]
     }], null, null); })();
@@ -3365,7 +3367,7 @@ _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["platformBrowser"]().boot
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\KL University\SEM 3\SDP\ecommercewebapplication\Project\client\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\KL University\SEM 3\SDP\ecommercewebapplication\Front End (Angular APP)\src\main.ts */"./src/main.ts");
 
 
 /***/ })
